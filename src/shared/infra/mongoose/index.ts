@@ -2,7 +2,7 @@ import { connect } from 'mongoose'
 
 const connectDB = async () => {
   try {
-    console.log('\n📚 trying to connect to mongodb')
+    console.log('\n📚 Trying to connect to MongoDB')
 
     await connect(process.env.MONGO_URL)
     console.log('📚 Connected to database mongodb')
