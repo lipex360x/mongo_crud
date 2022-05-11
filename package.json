@@ -6,7 +6,8 @@
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
     "test": "jest --passWithNoTests --noStackTrace --setupFiles dotenv/config --runInBand",
     "test:c": "jest --clearCache",
-    "test:v": "jest --passWithNoTests"
+    "test:v": "jest --passWithNoTests",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "license": "MIT",
   "dependencies": {

@@ -4,8 +4,12 @@ export type CreateProps = {
   content: string
 }
 
+export type FindQtdeProps = {
+  quantity?: number
+}
+
 export type FindByIdProps = {
-  id: any
+  id: string
 }
 
 export type UpdateProps = {
@@ -13,11 +17,12 @@ export type UpdateProps = {
 }
 
 export type DeleteProps = {
-  id: any
+  id: string
 }
 
 type ICrudProps = {
   create(data: CreateProps): Promise<CrudProps>
+  find(data: FindQtdeProps): Promise<CrudProps[]>
   findAll(): Promise<CrudProps[]>
   findById(data: FindByIdProps): Promise<CrudProps>
   update(data: UpdateProps): Promise<CrudProps>
